@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block css %}
+p {
+  font-size: 30px;
+}
+{% endblock css %}
+
+{% block title %}Details{% endblock title %}
+
+{% block body %}
+
+
+  <div class="container">
+    <div class="row my-3">
+      <div class="col-sm">
+        <img src="/media/{{details.img}}" alt="..." style="height:500px;width:400px;">  
+      </div>
+      <div class="col-sm text-break">
+        <h3 style="text-decoration:underline; font-weight:bold;">Specifications</h3>
+        <p><b>{{details.name}}</b></p>
+        <p><b>Model : </b>{{details.model}}</p>
+        <p><b>Price : &#8377; </b>{{details.price}}</p>
+        <p><b>Description :</b></p>
+        <p>{{details.desc}}</p>
+        <p><b>Mfd : </b>{{details.date}}</p>
+        <button type="button" class="btn btn-success">Buy Now</button>
+      </div>
+    </div>
+  </div>
+{% endblock body %}

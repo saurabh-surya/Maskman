@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block title %}Help Desk{% endblock title %}
+{% block body %}
+<h1 style="text-align: center;  color: black;"><b>Help Desk</b></h1>
+<div class="container my-3">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="https://source.unsplash.com/1600x300/?nature,travelling" class="d-block w-100"
+                alt="online image ">
+        </div>
+    </div>
+</div>
+<form method="POST" action="/contact">
+{% csrf_token %}
+<div class="container">
+    <div class="input-group my-3">
+        <span class="input-group-text" >Name</span>
+        <input type="text" aria-label="name" name="name" class="form-control">
+    </div>
+    <div class="mb-3">
+
+        <label for="exampleFormControlInput1" class="form-label" >Email address</label>
+        <input type="email" class="form-control" id="exampleFormControlInput1" name="email" placeholder="name@example.com">
+    </div>
+    <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label" >Comment</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="desc"></textarea>
+        <div class="col-12 my-3">
+            <button class="btn btn-success" type="submit">Submit</button>
+        </div>
+    </form>
+    </div>
+</div>
+
+{% endblock body %}
